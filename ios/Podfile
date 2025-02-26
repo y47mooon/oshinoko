@@ -1,3 +1,6 @@
+# 最初の部分に以下を追加
+project 'WidgetApp.xcodeproj'
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
 require File.join(File.dirname(`node --print "require.resolve('@react-native-community/cli-platform-ios/package.json')"`), "native_modules")
@@ -31,6 +34,10 @@ end
 target 'OshinokoWidgetExtension' do
   platform :ios, min_ios_version_supported
   pod 'WidgetKit'
+  
+  # RCT関連のポッドを除外
+  pod 'React-Core', :modular_headers => true, :configuration => ['Debug', 'Release']
+  pod 'React-RCTScrollView', :modular_headers => true, :configuration => ['Debug', 'Release']
 end
 
 post_install do |installer|

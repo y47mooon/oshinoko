@@ -19,7 +19,6 @@
 		CA1E06292D6DA50300A9B620 /* OshinokoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E06212D6DA50300A9B620 /* OshinokoWidget.swift */; };
 		CA1E062A2D6DA50300A9B620 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E061E2D6DA50300A9B620 /* AppIntent.swift */; };
 		CA1E062B2D6DA50300A9B620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1E061F2D6DA50300A9B620 /* Assets.xcassets */; };
-		CA1E062C2D6DA50300A9B620 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1E06202D6DA50300A9B620 /* Info.plist */; };
 		CAF4E8832D66E03A00842835 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF4E8822D66E03900842835 /* WidgetKit.framework */; };
 		CAF4E8852D66E03A00842835 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF4E8842D66E03A00842835 /* SwiftUI.framework */; };
 		CAF4E8942D66E03C00842835 /* OshinokoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CAF4E8812D66E03900842835 /* OshinokoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -279,7 +278,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1E062B2D6DA50300A9B620 /* Assets.xcassets in Resources */,
-				CA1E062C2D6DA50300A9B620 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,10 +562,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -636,10 +631,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

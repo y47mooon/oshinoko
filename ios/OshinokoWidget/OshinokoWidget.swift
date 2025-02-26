@@ -60,7 +60,22 @@ struct OshinokoWidget: Widget {
         }
         .configurationDisplayName("おしのこウィジェット")
         .description("おしのこの進捗状況を表示します")
-        .supportedFamilies([.systemSmall, .systemMedium])
-        .contentMarginsDisabled()
+        .supportedFamilies(supportedFamilies)
+    }
+    
+    private var supportedFamilies: [WidgetFamily] {
+        if #available(iOSApplicationExtension 16.0, *) {
+            return [
+                .systemSmall,
+                .systemMedium,
+                .accessoryCircular,
+                .accessoryRectangular
+            ]
+        } else {
+            return [
+                .systemSmall,
+                .systemMedium
+            ]
+        }
     }
 }
